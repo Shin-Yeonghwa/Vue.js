@@ -21,7 +21,7 @@
 
 
 ### 특징
-##### 1. UI화면단 라이브러리<br>
+#### 1. UI화면단 라이브러리<br>
 UI 화면 개발 방법 중 MVVM 패턴을 사용. <br>
 => 프런트엔드 로직과 백엔드 로직을 분리하여 깔금하게 코드 구성.
 
@@ -48,18 +48,20 @@ UI 화면 개발 방법 중 MVVM 패턴을 사용. <br>
 
 <br>
 
-##### 2. 컴포넌트 기반 프레임워크!
+#### 2. 컴포넌트 기반 프레임워크!
 
 컴포넌트 = 레고블럭<br>
 리액트, 앵귤러 모드 컴포넌트 기반 개발 방식.
 
 <br>
-**사용 이유?**<br>
-- 코드 재상하기 쉬윔.
+
+##### 사용이유?
+
+- 코드 재상하기 쉬움
 - HTMML 코드에서 화면 구조를 직관적으로 파악하기 쉬움.<br>
-    ![mvvm](img/block.PNG)<br>
-    레이아웃은 Header / container / Footer 로 되어 있고,<br>
-    container 안에는 Banner/Title/List가 쓰인것을 쉽게 알 수 있다.
+  ![mvvm](img/block.PNG)<br>
+  레이아웃은 Header / container / Footer 로 되어 있고,<br>
+  container 안에는 Banner/Title/List가 쓰인것을 쉽게 알 수 있다.
 
 <br>
 <br>

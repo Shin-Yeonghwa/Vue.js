@@ -69,15 +69,18 @@ $ vue --version
 2.x와 3.x 비교 설명
 
 <br>
-**설치**
+
+##### 설치
+
 ```
 $ npm i -g @vue/cli // vue-cli 3.x
 $ npm i -g vue-cli // vue-cli 2.x
 ```
 
 <br>
-**3.x에서 2.x 버전 템플릿 사용하기**
-<br>
+
+##### 3.x에서 2.x 버전 템플릿 사용하기
+
 3.x 이용해서 2.x 버전 템플릿을 사용하려면 @vue/cli-init 을 설치해야함.
 
 ```
@@ -87,7 +90,7 @@ $ vue init webpack my-project
 ```
 
 <br>
-**프로젝트 생성**<br>
+##### 프로젝트 생성
 2.x 버전에서는 eslint, unit test, night watch 등등 선택을 해야만 했음.<br>
 3.x 에서는 default (babel, eslint) 를 선택하면 가장 기본적인 설정으로 프로젝트가 생성됨.(나중에 언제든지 옵션을 추가할 수 있습니다.)
 
@@ -97,7 +100,8 @@ $ vue init webpack '프로젝트 명' // vue-cli 2.X
 ```
 
 <br>
-**CLI2 명령어**
+##### CLI2 명령어
+
 - `vue init webpack` : 고급 웹팩 기능을 활용한 프로젝트 구성 방식. 테스팅, 문법 검사등을 지원.
 - `vue init webpack-simple` : 웹팩 최소 기능을 활용한 프로젝트 구성 방식. 빠른 화면 프로토타이핑용.
 - `vue init browserify` : 고급 브라우저리파이 기능을 활용한 프로젝트 구성 방식. 테그스팅, 분법 검사등을 지원
@@ -106,22 +110,29 @@ $ vue init webpack '프로젝트 명' // vue-cli 2.X
 - `vue init pwq` : 웹팩 기반의 프로그레시브 웹앱 기능을 지원하는 뷰 프로젝트.
 
 <br>
-**서버실행**
+
+##### 서버실행
+
 ```
 $ npm run serve // vue-cli 3.x
 $ npm run dev // vue-cli 2.x
 ```
 
 <br>
-**node_modules**
+
+##### node_modules
+
 - vue-cli 3.x - vue create를 통한 프로젝트 생성 단계에서 함께 설치됩니다.
 - vue-cli 2.x - 프로젝트 생성 후 npm install을 통해 설치합니다.
 
 
 <br>
-**웹팩 설정 파일**
+
+##### 웹팩 설정 파일
+
 - vue-cli 3.x 노출 X
 - vue-cli 2.x 노출 O
+
 <br>
 
 2.x에서는 webpack.config.js 파일이 루트 디렉토리에 있음<br>
@@ -129,16 +140,17 @@ $ npm run dev // vue-cli 2.x
 
 <br>
 
-**프로젝트 구성**<br>
+##### 프로젝트 구성
+
 2.x 에서는 simple, webpack, webpack-simple, pwa 등 템플릿 리스트 중 하나를 선택해서 프로젝트를 구성했다면, <br>
 3.x 에서는 프로젝트에 플러그인 기반으로 원하는 설정 추가합니다.
 
-**언어**
-3.x : ES6기준
+##### 언어
+3.x : ES6기준<br>
 2.x : ES5 기준(ES6 선택 가능)
 
 
-**GUI**
-3.x : GUI 툴 제공 (vue ui)
+##### GUI
+3.x : GUI 툴 제공 (vue ui) <br>
 2.x : x
 
