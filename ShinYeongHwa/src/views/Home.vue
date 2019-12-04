@@ -4,8 +4,8 @@
       <BaseButton>버튼입니다.</BaseButton>
       <BaseButton colorType="white_outline">버튼입니다.</BaseButton>
     </BaseBanner>
-
     <div :class="$style.section">
+      <BaseTitle>이미지 리스트</BaseTitle>
       <ul :class="$style.thumb_list">
         <BaseCard
           v-for="(item,index) in cardslist"
@@ -15,17 +15,16 @@
         ></BaseCard>
       </ul>
     </div>
-
     <BaseTab :lists="contentslist" type="tab_border"></BaseTab>
-
     <div :class="$style.section">
+      <BaseTitle>포스트 이미지 리스트</BaseTitle>
       <ul :class="$style.post_list">
-        <BaseCard
-          v-for="(item,index) in cardslist"
+        <BasePostCard
+          v-for="(item,index) in postcardslist"
           :key="index"
-          :cardslist="item"
+          :postcardslist="item"
           :class="$style.item"
-        ></BaseCard>
+        ></BasePostCard>
       </ul>
     </div>
   </BaseLayout>
@@ -38,6 +37,8 @@ import BaseBanner from "@/components/base-banner";
 import BaseButton from "@/components/base-button";
 import BaseTab from "@/components/base-tab";
 import BaseCard from "@/components/base-card";
+import BasePostCard from "@/components/base-postcard";
+import BaseTitle from "@/components/base-title";
 
 const contentslist = [
   {
@@ -103,6 +104,57 @@ const cardslist = [
   }
 ];
 
+const postcardslist = [
+  {
+    src: "p1.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.",
+    date: "2019.03.23.",
+    num: "200"
+  },
+  {
+    src: "p2.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.",
+    date: "2019.03.23.",
+    num: "200"
+  },
+  {
+    src: "p3.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    date: "2019.03.23.",
+    num: "200"
+  },
+  {
+    src: "p4.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    date: "2019.03.23.",
+    num: "200"
+  },
+  {
+    src: "p5.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    date: "2019.03.23.",
+    num: "200"
+  },
+  {
+    src: "p6.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    date: "2019.03.23.",
+    num: "200"
+  }
+];
+
 export default {
   name: "home",
   components: {
@@ -110,12 +162,15 @@ export default {
     BaseBanner,
     BaseButton,
     BaseTab,
-    BaseCard
+    BaseCard,
+    BasePostCard,
+    BaseTitle
   },
   data() {
     return {
       contentslist,
-      cardslist
+      cardslist,
+      postcardslist
     };
   }
 };
@@ -134,17 +189,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
   margin-left: -20px;
-}
-
-.thumb_list {
   .item {
     width: 33.3333%;
     padding: 0;
     box-sizing: border-box;
   }
 }
-
-// list2
 .post_list {
   .item {
     overflow: hidden;
@@ -153,53 +203,6 @@ export default {
     margin-bottom: 20px;
     box-sizing: border-box;
     border-bottom: 1px solid #d5d5d5;
-  }
-  .inner {
-    text-decoration: none;
-  }
-  .thumb_box {
-    float: right;
-    width: 210px;
-    height: 167px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .content_box {
-    overflow: hidden;
-    padding-right: 25px;
-  }
-  .title {
-    display: block;
-    padding: 15px 0 14px;
-    font-size: 20px;
-    color: #000;
-  }
-  .description {
-    margin: 0;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000;
-  }
-  .info_box {
-    margin-top: 20px;
-    line-height: 20px;
-    font-size: 13px;
-    color: #999;
-  }
-  .info {
-    display: inline-block;
-    margin-right: 6px;
-    vertical-align: top;
-    & + .info::before {
-      content: "";
-      display: inline-block;
-      height: 12px;
-      margin: 3px 10px 0 0;
-      border-left: 1px solid #999;
-      vertical-align: top;
-    }
   }
 }
 </style>
