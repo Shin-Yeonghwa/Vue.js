@@ -1,112 +1,110 @@
 <template>
   <BaseLayout>
-      <BaseBanner 
-        title="이건 타이틀이야" 
-        description="이건 설명 글이야">
-        <BaseButton >버튼입니다.</BaseButton>
-        <BaseButton colorType="white_outline">버튼입니다.</BaseButton>
-      </BaseBanner>
-      
-      <div :class="$style.section">
-        <ul :class="$style.thumb_list">
-          <BaseCard 
-            v-for="(item,index) in cardslist"
-            :key="index"
-            :cardslist="item"
-            :class="$style.item"
-            >
-          </BaseCard>
-        </ul>
-      </div>
-      
-      <BaseTab :lists="contentslist" type="tab_border"></BaseTab>
-      
-      <div :class="$style.section">
-        <ul :class="$style.post_list">
-          <BaseCard 
-              v-for="(item,index) in cardslist"
-              :key="index"
-              :cardslist="item"
-              :class="$style.item"
-              >
-            </BaseCard>
-        </ul>
-      </div>
+    <BaseBanner title="이건 타이틀이야" description="이건 설명 글이야">
+      <BaseButton>버튼입니다.</BaseButton>
+      <BaseButton colorType="white_outline">버튼입니다.</BaseButton>
+    </BaseBanner>
+
+    <div :class="$style.section">
+      <ul :class="$style.thumb_list">
+        <BaseCard
+          v-for="(item,index) in cardslist"
+          :key="index"
+          :cardslist="item"
+          :class="$style.item"
+        ></BaseCard>
+      </ul>
+    </div>
+
+    <BaseTab :lists="contentslist" type="tab_border"></BaseTab>
+
+    <div :class="$style.section">
+      <ul :class="$style.post_list">
+        <BaseCard
+          v-for="(item,index) in cardslist"
+          :key="index"
+          :cardslist="item"
+          :class="$style.item"
+        ></BaseCard>
+      </ul>
+    </div>
   </BaseLayout>
 </template>
 
 <script>
-
 // @ is an alias to /src
-import BaseLayout from '@/components/base-layout'
-import BaseBanner from '@/components/base-banner'
-import BaseButton from '@/components/base-button'
-import BaseTab from '@/components/base-tab'
-import BaseCard from '@/components/base-card'
-
+import BaseLayout from "@/components/base-layout";
+import BaseBanner from "@/components/base-banner";
+import BaseButton from "@/components/base-button";
+import BaseTab from "@/components/base-tab";
+import BaseCard from "@/components/base-card";
 
 const contentslist = [
-    {
-        text: 'Tab1',
-        href: '/Tab1'
-    },
-    {
-        text: 'Tab2',
-        href: '/Tab2'
-    },
-    {
-        text: 'Tab3',
-        href: '/Tab3'
-    },
-    {
-        text: 'Tab3',
-        href: '/Tab4'
-    },
+  {
+    text: "Tab1",
+    href: "/Tab1"
+  },
+  {
+    text: "Tab2",
+    href: "/Tab2"
+  },
+  {
+    text: "Tab3",
+    href: "/Tab3"
+  },
+  {
+    text: "Tab3",
+    href: "/Tab4"
+  }
 ];
-
 
 const cardslist = [
-    {
-        src: 'p1.jpg',
-        maintext: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum',
-        subtext: 'Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.',
-        labelstype: 'hot'
-    },
-    {
-        src: 'p2.jpg',
-        maintext: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum',
-        subtext: 'Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.',
-        labelstype: 'new'
-    },
-    {
-        src: 'p3.jpg',
-        maintext: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum',
-        subtext: 'bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb',
-        labelstype: 'hot'
-    },
-    {
-        src: 'p4.jpg',
-        maintext: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum',
-        subtext: 'bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb',
-        labelstype: 'new'
-    },
-    {
-        src: 'p5.jpg',
-        maintext: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum',
-        subtext: 'bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb',
-        labelstype: 'new'
-    },
-    {
-        src: 'p6.jpg',
-        maintext: 'Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum',
-        subtext: 'bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb',
-        labelstype: 'new'
-    },
+  {
+    src: "p1.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.",
+    labelstype: "hot"
+  },
+  {
+    src: "p2.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.",
+    labelstype: "new"
+  },
+  {
+    src: "p3.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    labelstype: "hot"
+  },
+  {
+    src: "p4.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    labelstype: "new"
+  },
+  {
+    src: "p5.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    labelstype: "new"
+  },
+  {
+    src: "p6.jpg",
+    maintext: "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
+    subtext:
+      "bPraesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.bb",
+    labelstype: "new"
+  }
 ];
 
-
 export default {
-  name: 'home',
+  name: "home",
   components: {
     BaseLayout,
     BaseBanner,
@@ -114,22 +112,22 @@ export default {
     BaseTab,
     BaseCard
   },
-  data(){
-    return{
+  data() {
+    return {
       contentslist,
       cardslist
-    }
+    };
   }
-}
+};
 </script>
 
 
 <style lang="scss" module>
 .section {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 30px 0 20px;
-    }
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}
 .thumb_list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,7 +136,7 @@ export default {
   margin-left: -20px;
 }
 
-.thumb_list{
+.thumb_list {
   .item {
     width: 33.3333%;
     padding: 0;
@@ -146,7 +144,6 @@ export default {
   }
 }
 
-  
 // list2
 .post_list {
   .item {
@@ -195,8 +192,8 @@ export default {
     display: inline-block;
     margin-right: 6px;
     vertical-align: top;
-    &+.info::before {
-      content: '';
+    & + .info::before {
+      content: "";
       display: inline-block;
       height: 12px;
       margin: 3px 10px 0 0;
@@ -205,4 +202,4 @@ export default {
     }
   }
 }
-  </style>
+</style>
